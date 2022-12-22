@@ -16,37 +16,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              Container(
-                width: 100,
-                color: Colors.red,
-                // child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/md-pp.png'),
               ),
-              Container(
-                // color: Colors.blue,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.green,
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: 100,
-                color: Colors.blue,
-                // child: Text('Container 3'),
-              ),
+              
             ],
           ),
         ),
