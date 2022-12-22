@@ -22,7 +22,25 @@ class MyApp extends StatelessWidget {
                 radius: 50,
                 backgroundImage: AssetImage('images/md-pp.png'),
               ),
-              
+              Text(
+                'Mohammad Khan',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'AI ENGINEER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
         ),
