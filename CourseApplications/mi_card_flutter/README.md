@@ -25,4 +25,18 @@ Mi Card is a personal business card. Imagine every time you wanted to give someo
 
 >This is a companion project to The App Brewery's Complete Flutter Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
+
+## Developer Notes  
+
+Some challenges inside the course lectures are also done and can accessed by commit messages that says challenge in its message.  
+
+Layout challenge specs is like this:   
+
+![Layout Challenge Specs](Layout-Challenge-Specs.png)  
+
+After completing the app, it looks like this:  
+
+![Completed App](completed_app.png)
+
+
 ![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
