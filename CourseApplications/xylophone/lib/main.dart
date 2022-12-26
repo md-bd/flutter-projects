@@ -1,36 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-
-//
-// void main() => runApp(XylophoneApp());
-//
-// class XylophoneApp extends StatelessWidget {
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         body: SafeArea(
-//           child: Center(
-//             child: TextButton(
-//               onPressed: () {
-//
-//                 final audioCache = AudioCache();
-//                 AudioPlayer audioPlayer = AudioPlayer();
-//                 await audioPlayer.play(DeviceFileSource('note1.wav'));
-//
-//               },
-//               child: Text('Click me'),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 void main() => runApp(xylophoneapp());
 
 class xylophoneapp extends StatefulWidget {
