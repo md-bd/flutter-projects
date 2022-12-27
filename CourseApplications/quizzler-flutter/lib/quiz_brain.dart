@@ -45,4 +45,18 @@ class QuizBrain {
     return _questionBank[_questionNumber].questionAnswer;
   }
 
+  bool isFinished(){
+    if (_questionNumber == _questionBank.length - 1) {
+      print('end ');
+      return true;
+    } else {
+      // print(_questionNumber);
+      return false;
+    }
+  }
+
+  void reset() {
+    _questionNumber = 0;
+  }
+
 }
