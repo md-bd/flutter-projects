@@ -10,11 +10,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-
     getLocation();
-
   }
 
   void getLocation() async {
@@ -49,8 +46,14 @@ class _LoadingScreenState extends State<LoadingScreen> {
           'Location permissions are permanently denied, we cannot request permissions.');
     }
 
-    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
-    print(position);
+    try {
+      Position position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.low);
+      print(position);
+    }
+    catch (e) {
+      print(e);
+    }
   }
 
   @override
