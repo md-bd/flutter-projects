@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
 import 'constants.dart';
-
+import 'results_page.dart';
 
 enum Gender {
   male,
@@ -71,7 +71,7 @@ class _InputPageState extends State<InputPage> {
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'HEIGHT',
                     style: kLabelTextStyle,
                   ),
@@ -84,7 +84,7 @@ class _InputPageState extends State<InputPage> {
                         height.toString(),
                         style: kNumberTextStyle,
                       ),
-                      Text(
+                      const Text(
                         'cm',
                         style: kLabelTextStyle,
                       ),
@@ -124,7 +124,7 @@ class _InputPageState extends State<InputPage> {
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
+                        const Text(
                           'WEIGHT',
                           style: kLabelTextStyle,
                         ),
@@ -194,16 +194,23 @@ class _InputPageState extends State<InputPage> {
                 ),
               ],
             ),),
-          Container(
-            color: kBottomContainerColor,
-            margin: const EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: kBottomContainerHeight,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ResultsPage()));
+            },
+            child: Container(
+              color: kBottomContainerColor,
+              margin: const EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: kBottomContainerHeight,
+              child: Text('CALCULATE'),
+            ),
           ),
         ],),
     );
   }
 }
+
 
 class RoundIconButton extends StatelessWidget {
   RoundIconButton({required this.icon, required this.onPressed});
