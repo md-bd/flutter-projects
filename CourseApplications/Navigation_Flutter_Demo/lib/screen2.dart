@@ -14,7 +14,9 @@ class Screen2 extends StatelessWidget {
               foregroundColor: Colors.white, backgroundColor: Colors.blue, // foreground
             ),
           child: const Text('Go Back To Screen 1'),
-          onPressed: () {},
+          onPressed: () {
+              Navigator.pop(context);
+          },
         ),
       ),
     );
