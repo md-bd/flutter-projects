@@ -1,3 +1,4 @@
+import 'package:clima/screens/city_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 import 'package:clima/services/weather.dart';
@@ -30,6 +31,15 @@ class _LocationScreenState extends State<LocationScreen> {
   void updateUI(dynamic weatherData) {
 
     setState(() {
+
+      if (weatherData == null) {
+        temperature = 0;
+        weatherIcon = 'Error';
+        weatherMessage = 'Unable to get weather data';
+        cityName = '';
+        return;
+      }
+
       double temp = weatherData['main']['temp'];
       temperature = temp.toInt();
 
@@ -39,6 +49,7 @@ class _LocationScreenState extends State<LocationScreen> {
       cityName = weatherData['name'];
 
       weatherMessage = weather.getMessage(temperature!);
+      // print(cityName);
     });
   }
 
@@ -64,14 +75,21 @@ class _LocationScreenState extends State<LocationScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      var weatherData = await weather.getLocationWeather();
+                      updateUI(weatherData);
+                    },
                     child: Icon(
                       Icons.near_me,
                       size: 50.0,
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return CityScreen();
+                      },),);
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
